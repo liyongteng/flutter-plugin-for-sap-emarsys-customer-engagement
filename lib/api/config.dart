@@ -29,12 +29,12 @@ class Config {
     return _channel.invokeMethod('config.contactFieldId');
   }
 
-  Future<String> hardwareId() async {
-    String? hardwareId = await _channel.invokeMethod('config.hardwareId');
-    if (hardwareId == null) {
+  Future<String> clientId() async {
+    String? clientId = await _channel.invokeMethod('config.clientId');
+    if (clientId == null) {
       throw TypeError();
     }
-    return hardwareId;
+    return clientId;
   }
 
   Future<String> languageCode() async {
